@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 //
 // ImageLib Sources
-// Copyright (C) 2000-2009 by Denton Woods
+// Copyright (C) 2000-2017 by Denton Woods
 // Last modified: 03/07/2009
 //
 // Filename: IL/il.h
@@ -63,7 +63,7 @@ extern "C" {
 	#endif
 #endif
 
-#ifdef RESTRICT_KEYWORD
+#if defined(RESTRICT_KEYWORD) && !defined(__cplusplus)
 #define RESTRICT restrict
 #define CONST_RESTRICT const restrict
 #else
@@ -161,8 +161,8 @@ typedef long long unsigned int ILuint64;
 // IL-specific #define's
 //
 
-#define IL_VERSION_1_7_8 1
-#define IL_VERSION       178
+#define IL_VERSION_1_8_0 1
+#define IL_VERSION       180
 
 
 // Attribute Bits

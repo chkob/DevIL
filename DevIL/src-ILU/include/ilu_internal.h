@@ -59,18 +59,22 @@ extern const ILdouble	IL_PI;
 extern const ILdouble	IL_DEGCONV;
 
 
-STATIC_INLINE ILfloat ilCos(ILfloat Angle) {
-	return (ILfloat)(cos(Angle * IL_DEGCONV));
-}
+#ifdef ILU_INTERNAL_C
+#undef NOINLINE
+#undef INLINE
+#define INLINE
+#endif
 
-STATIC_INLINE ILfloat ilSin(ILfloat Angle) {
-	return (ILfloat)(sin(Angle * IL_DEGCONV));
-}
+// Internal functions
+ILfloat ilCos(ILfloat Angle);
+ILfloat ilSin(ILfloat Angle);
+ILint ilRound(ILfloat Num);
 
-
-STATIC_INLINE ILint ilRound(ILfloat Num) {
-	return (ILint)(Num + 0.5); // this is truncating in away-from-0, not rounding
-}
+/*#ifndef NOINLINE
+ILfloat ilCos(ILfloat Angle);
+ILfloat ilSin(ILfloat Angle);
+ILint ilRound(ILfloat Num);
+#endif*/
 
 
 

@@ -1,6 +1,6 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by IL.rc
+// Used by IL Unicode.rc
 //
 #define SW_HIDE                         0
 #define HIDE_WINDOW                     0
@@ -540,7 +540,7 @@
 #define VK_MENU                         0x12
 #define WM_QUIT                         0x0012
 #define HTBORDER                        18
-#define CF_MAX                          18
+//#define CF_MAX                          18
 #define LANG_KOREAN                     0x12
 #define SUBLANG_ENGLISH_SINGAPORE       0x12
 #define SUBLANG_SPANISH_HONDURAS        0x12
@@ -1477,11 +1477,8 @@
 #define SC_CONTEXTHELP                  0xF180
 #define LVS_TYPESTYLEMASK               0xfc00
 #define SPVERSION_MASK                  0x0000FF00
-//#define HTERROR                         -2
-#define IDC_STATIC                      -1
 #define UNICODE_NOCHAR                  0xFFFF
-//#define PWR_FAIL                        -1
-#define HTTRANSPARENT                   -1
+//#define HTTRANSPARENT                   -1
 
 // Next default values for new objects
 // 
